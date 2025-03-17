@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqw2wb1uewqlk"]
+
+[ext_resource type="Texture2D" uid="uid://5abw4awf4evj" path="res://dasds.png" id="1_2jh14"]
+
+[node name="Mapa" type="Node2D"]
+
+[node name="Dasds" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(542, 328)
+texture = ExtResource("1_2jh14")
