@@ -1,52 +1,71 @@
 [gd_scene load_steps=3 format=3 uid="uid://b64v4uhtg1ai"]
 
-[ext_resource type="Texture2D" uid="uid://b5sq68o13oxjx" path="res://Bez tytułu.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://j0r50rsgr5nl" path="res://main.gd" id="1_uu6xs"]
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_uu6xs")
+[sub_resource type="LabelSettings" id="LabelSettings_glv2v"]
+font_size = 50
+font_color = Color(0, 0, 1, 1)
 
-[node name="Bez tytułu" type="Sprite2D" parent="."]
-position = Vector2(557, 314)
-scale = Vector2(6.78962, 2.75833)
-texture = ExtResource("1_glv2v")
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uu6xs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -119.5
+offset_right = 119.5
+offset_bottom = 69.0
+grow_horizontal = 2
+text = "WieśBuuk"
+label_settings = SubResource("LabelSettings_glv2v")
+
+[node name="Mapa" type="Button" parent="CanvasLayer"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -61.0
-offset_right = 244.0
+offset_right = 76.0
 grow_vertical = 0
 text = "MAPA"
 
-[node name="Button2" type="Button" parent="CanvasLayer"]
+[node name="Informacje" type="Button" parent="CanvasLayer"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -122.0
+offset_left = -53.0
 offset_top = -61.0
-offset_right = 122.0
+offset_right = 53.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "INFORMACJE"
 
-[node name="Button3" type="Button" parent="CanvasLayer"]
+[node name="Market" type="Button" parent="CanvasLayer"]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -244.0
+offset_left = -72.0
 offset_top = -61.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "MARKET"
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Mapa" to="." method="_on_mapa_pressed"]
+[connection signal="pressed" from="CanvasLayer/Informacje" to="." method="_on_informacje_pressed"]
+[connection signal="pressed" from="CanvasLayer/Market" to="." method="_on_market_pressed"]

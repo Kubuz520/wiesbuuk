@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://b7r0cw3b4abkw"]
+[gd_scene load_steps=2 format=3 uid="uid://b7r0cw3b4abkw"]
 
-[node name="Informacje" type="Node2D"]
+[ext_resource type="Script" uid="uid://ba04itcmaolqn" path="res://informacje.gd" id="1_6e3w1"]
+
+[node name="Informacje" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6e3w1")
