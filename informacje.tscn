@@ -1,8 +1,179 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7r0cw3b4abkw"]
+[gd_scene load_steps=8 format=3 uid="uid://b7r0cw3b4abkw"]
 
 [ext_resource type="Script" uid="uid://ba04itcmaolqn" path="res://informacje.gd" id="1_6e3w1"]
+[ext_resource type="Script" uid="uid://bci0fbvcudkgj" path="res://codzienna_herezja!.gd" id="2_5yl4s"]
+[ext_resource type="Texture2D" uid="uid://m4kebfeegfku" path="res://j30hv266h0.webp" id="2_xj15a"]
+[ext_resource type="Texture2D" uid="uid://hwhnmi513sga" path="res://pobrane.jpg" id="3_5yl4s"]
+[ext_resource type="Texture2D" uid="uid://e7nefwvski5l" path="res://41Dua7cmnML._AC_UF1000,1000_QL80_.jpg" id="4_irgbo"]
+[ext_resource type="Texture2D" uid="uid://d0m2yn432wmnf" path="res://diabel-szatan-vs-aniol-bog-kaczynski-vs-tusk-przerobka.jpg" id="5_ls7i5"]
+[ext_resource type="Texture2D" uid="uid://cmsi5pol6s2to" path="res://kaczynski.jpg" id="6_4ce04"]
 
 [node name="Informacje" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_6e3w1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.203922, 0.203922, 1)
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+current_tab = 0
+
+[node name="Codzienna Herezja!" type="Control" parent="CanvasLayer/TabContainer"]
+layout_mode = 2
+script = ExtResource("2_5yl4s")
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TabContainer/Codzienna Herezja!"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 422.0
+grow_horizontal = 2
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+text = "News Dnia"
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+text = "News Dnia"
+
+[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+text = "News Dnia"
+
+[node name="Label3" type="Label" parent="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TVP" type="Control" parent="CanvasLayer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/TVP"]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 186.0
+offset_right = 283.0
+offset_bottom = 209.0
+text = "TUSK ZNOWU KRADNIE!!1!11!"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TabContainer/TVP"]
+position = Vector2(160, 104)
+scale = Vector2(0.356808, 0.356808)
+texture = ExtResource("2_xj15a")
+
+[node name="Pobrane" type="Sprite2D" parent="CanvasLayer/TabContainer/TVP"]
+position = Vector2(86, 307)
+scale = Vector2(0.708889, 0.708889)
+texture = ExtResource("3_5yl4s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/TabContainer/TVP"]
+position = Vector2(240, 318)
+scale = Vector2(0.185762, 0.185762)
+texture = ExtResource("4_irgbo")
+
+[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/TVP"]
+offset_left = 4.0
+offset_top = 418.0
+offset_right = 320.0
+offset_bottom = 467.0
+text = "TUSK NAJGORSZYM PRZESTĘPCĄ ŚWIATA 
+- ŚCIGA GO INTERPOL!!1!!!1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TVN" type="Control" parent="CanvasLayer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TabContainer/TVN"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = 193.0
+offset_right = 119.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "KACZOR TO SZATAN
+ OTO 10 DOWODÓW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Diabel-szatan-vs-aniol-bog-kaczynski-vs-tusk-przerobka" type="Sprite2D" parent="CanvasLayer/TabContainer/TVN"]
+position = Vector2(159, 102)
+scale = Vector2(0.410628, 0.410628)
+texture = ExtResource("5_ls7i5")
+
+[node name="Kaczynski" type="Sprite2D" parent="CanvasLayer/TabContainer/TVN"]
+position = Vector2(155, 330)
+scale = Vector2(0.140496, 0.140496)
+texture = ExtResource("6_4ce04")
+
+[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/TVN"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = 419.0
+offset_right = 119.0
+offset_bottom = 468.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "POŻARY W GRECJI WYWOŁANE
+ PRZEZ KACZORA - POTWIERDZONE!!1!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -31.0
+offset_right = 22.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/TabContainer/Codzienna Herezja!/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main" to="." method="_on_main_pressed"]

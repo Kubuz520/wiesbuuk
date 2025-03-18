@@ -20,20 +20,12 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.203922, 0.203922, 0.203922, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 2
-
 [node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
-current_tab = 1
+current_tab = 2
 
 [node name="Sprzęty Rolne" type="Control" parent="CanvasLayer/TabContainer"]
 visible = false
@@ -67,118 +59,78 @@ layout_mode = 2
 text = "Motyka epicka - 50 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
-[node name="Label5" type="Label" parent="CanvasLayer/TabContainer/Sprzęty Rolne/VBoxContainer"]
-layout_mode = 2
-text = "Motyka legendarna 
-- 1 zł"
-label_settings = SubResource("LabelSettings_qy6h4")
-
 [node name="Produkty Rolne" type="Control" parent="CanvasLayer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TabContainer/Produkty Rolne"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="CanvasLayer/TabContainer/Produkty Rolne/VBoxContainer"]
 layout_mode = 2
-text = "Motyka - 30 gr"
+text = "ziarno żyta - 2 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label2" type="Label" parent="CanvasLayer/TabContainer/Produkty Rolne/VBoxContainer"]
 layout_mode = 2
-text = "Motyka Zardzewiała
- - 15 gr"
+text = "chlep - 20 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label3" type="Label" parent="CanvasLayer/TabContainer/Produkty Rolne/VBoxContainer"]
 layout_mode = 2
-text = "Motyka lśniąca - 40 gr"
+text = "gnojówka 1l - 10 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label4" type="Label" parent="CanvasLayer/TabContainer/Produkty Rolne/VBoxContainer"]
 layout_mode = 2
-text = "Motyka epicka - 50 gr"
-label_settings = SubResource("LabelSettings_qy6h4")
-
-[node name="Label5" type="Label" parent="CanvasLayer/TabContainer/Produkty Rolne/VBoxContainer"]
-layout_mode = 2
-text = "Motyka legendarna 
-- 1 zł"
+text = "ziarna sorgo - 40 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Zwierzęta" type="Control" parent="CanvasLayer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TabContainer/Zwierzęta"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 50
 
 [node name="Label" type="Label" parent="CanvasLayer/TabContainer/Zwierzęta/VBoxContainer"]
 layout_mode = 2
-text = "Motyka - 30 gr"
+text = "świnia - 50 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label2" type="Label" parent="CanvasLayer/TabContainer/Zwierzęta/VBoxContainer"]
 layout_mode = 2
-text = "Motyka Zardzewiała
- - 15 gr"
+text = "koń - 5 zł"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label3" type="Label" parent="CanvasLayer/TabContainer/Zwierzęta/VBoxContainer"]
 layout_mode = 2
-text = "Motyka lśniąca - 40 gr"
+text = "kurczak - 20 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Label4" type="Label" parent="CanvasLayer/TabContainer/Zwierzęta/VBoxContainer"]
 layout_mode = 2
-text = "Motyka epicka - 50 gr"
+text = "krowa - 80 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
-[node name="Label5" type="Label" parent="CanvasLayer/TabContainer/Zwierzęta/VBoxContainer"]
-layout_mode = 2
-text = "Motyka legendarna 
-- 1 zł"
-label_settings = SubResource("LabelSettings_qy6h4")
+[node name="Main" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back"
 
-[node name="Żony" type="Control" parent="CanvasLayer/TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TabContainer/Żony"]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 50
-
-[node name="Label" type="Label" parent="CanvasLayer/TabContainer/Żony/VBoxContainer"]
-layout_mode = 2
-text = "Motyka - 30 gr"
-label_settings = SubResource("LabelSettings_qy6h4")
-
-[node name="Label2" type="Label" parent="CanvasLayer/TabContainer/Żony/VBoxContainer"]
-layout_mode = 2
-text = "Motyka Zardzewiała
- - 15 gr"
-label_settings = SubResource("LabelSettings_qy6h4")
-
-[node name="Label3" type="Label" parent="CanvasLayer/TabContainer/Żony/VBoxContainer"]
-layout_mode = 2
-text = "Motyka lśniąca - 40 gr"
-label_settings = SubResource("LabelSettings_qy6h4")
-
-[node name="Label4" type="Label" parent="CanvasLayer/TabContainer/Żony/VBoxContainer"]
-layout_mode = 2
-text = "Motyka epicka - 50 gr"
-label_settings = SubResource("LabelSettings_qy6h4")
-
-[node name="Label5" type="Label" parent="CanvasLayer/TabContainer/Żony/VBoxContainer"]
-layout_mode = 2
-text = "Motyka legendarna 
-- 1 zł"
-label_settings = SubResource("LabelSettings_qy6h4")
+[connection signal="pressed" from="CanvasLayer/Main" to="." method="_on_main_pressed"]

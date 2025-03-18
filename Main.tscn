@@ -32,6 +32,16 @@ grow_horizontal = 2
 text = "WieśBuuk"
 label_settings = SubResource("LabelSettings_glv2v")
 
+[node name="Calc" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -147.0
+offset_right = 76.0
+offset_bottom = -86.0
+grow_vertical = 0
+text = "CALC"
+
 [node name="Mapa" type="Button" parent="CanvasLayer"]
 anchors_preset = 2
 anchor_top = 1.0
@@ -66,6 +76,7 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "MARKET"
 
+[connection signal="pressed" from="CanvasLayer/Calc" to="." method="_on_calc_pressed"]
 [connection signal="pressed" from="CanvasLayer/Mapa" to="." method="_on_mapa_pressed"]
 [connection signal="pressed" from="CanvasLayer/Informacje" to="." method="_on_informacje_pressed"]
 [connection signal="pressed" from="CanvasLayer/Market" to="." method="_on_market_pressed"]
