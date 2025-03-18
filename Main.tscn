@@ -11,27 +11,42 @@ position = Vector2(557, 314)
 scale = Vector2(6.78962, 2.75833)
 texture = ExtResource("1_glv2v")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 39.0
-offset_top = 574.0
-offset_right = 283.0
-offset_bottom = 635.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -61.0
+offset_right = 244.0
+grow_vertical = 0
 text = "MAPA"
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 492.0
-offset_top = 570.0
-offset_right = 736.0
-offset_bottom = 631.0
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -61.0
+offset_right = 122.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "INFORMACJE"
 
-[node name="Button3" type="Button" parent="."]
-offset_left = 892.0
-offset_top = 570.0
-offset_right = 1136.0
-offset_bottom = 631.0
+[node name="Button3" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -244.0
+offset_top = -61.0
+grow_horizontal = 0
+grow_vertical = 0
 text = "MARKET"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_button_3_pressed"]
