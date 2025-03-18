@@ -1,0 +1,178 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj71ur1y2cdl4"]
+
+[ext_resource type="Script" uid="uid://cp7fw8w30rq2s" path="res://ljshdf.gd" id="1_lma6h"]
+[ext_resource type="Script" uid="uid://y8nwyulrslgb" path="res://sda.gd" id="2_xuro6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_lma6h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_top = 135.0
+offset_right = 321.0
+offset_bottom = 569.0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 12
+columns = 4
+
+[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "1"
+script = ExtResource("2_xuro6")
+
+[node name="Button2" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "2"
+script = ExtResource("2_xuro6")
+num = "2"
+
+[node name="Button3" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "3"
+script = ExtResource("2_xuro6")
+num = "3"
+
+[node name="Button4" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "x"
+script = ExtResource("2_xuro6")
+num = "x"
+
+[node name="Button5" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "4"
+script = ExtResource("2_xuro6")
+num = "4"
+
+[node name="Button6" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "5"
+script = ExtResource("2_xuro6")
+num = "5"
+
+[node name="Button7" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "6"
+script = ExtResource("2_xuro6")
+num = "6"
+
+[node name="Button8" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "-"
+script = ExtResource("2_xuro6")
+num = "-"
+
+[node name="Button9" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "7"
+script = ExtResource("2_xuro6")
+num = "7"
+
+[node name="Button10" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "8"
+script = ExtResource("2_xuro6")
+num = "8"
+
+[node name="Button11" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "9"
+script = ExtResource("2_xuro6")
+num = "9"
+
+[node name="Button12" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "+"
+script = ExtResource("2_xuro6")
+num = "+"
+
+[node name="Button13" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "C
+"
+script = ExtResource("2_xuro6")
+num = "C"
+
+[node name="Button14" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "0"
+script = ExtResource("2_xuro6")
+num = "0"
+
+[node name="Button15" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = ","
+script = ExtResource("2_xuro6")
+num = ","
+
+[node name="Button16" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 66
+text = "="
+script = ExtResource("2_xuro6")
+num = "="
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 316.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button" to="CanvasLayer/GridContainer/Button" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button2" to="CanvasLayer/GridContainer/Button2" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button2" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button3" to="CanvasLayer/GridContainer/Button3" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button3" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button4" to="CanvasLayer/GridContainer/Button4" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button4" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button5" to="CanvasLayer/GridContainer/Button5" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button5" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button6" to="CanvasLayer/GridContainer/Button6" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button6" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button7" to="CanvasLayer/GridContainer/Button7" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button7" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button8" to="CanvasLayer/GridContainer/Button8" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button8" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button9" to="CanvasLayer/GridContainer/Button9" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button9" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button10" to="CanvasLayer/GridContainer/Button10" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button10" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button11" to="CanvasLayer/GridContainer/Button11" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button11" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button12" to="CanvasLayer/GridContainer/Button12" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button12" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button13" to="CanvasLayer/GridContainer/Button13" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button13" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button14" to="CanvasLayer/GridContainer/Button14" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button14" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button15" to="CanvasLayer/GridContainer/Button15" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button15" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/GridContainer/Button16" to="CanvasLayer/GridContainer/Button16" method="_on_pressed"]
+[connection signal="puls" from="CanvasLayer/GridContainer/Button16" to="." method="_on_button_puls"]
