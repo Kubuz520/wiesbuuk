@@ -16,3 +16,7 @@ func _on_button_puls(num) -> void:
 		label.add_theme_font_size_override("font_size", 20)
 		label.text = "Po co ci ta wiedza, lepiej idz pogrzeb w polu."
 		g = false
+
+
+func _on_main_pressed():
+	get_tree().change_scene_to_file("res://Main.tscn")

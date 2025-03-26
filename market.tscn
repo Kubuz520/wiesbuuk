@@ -25,10 +25,9 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
-current_tab = 2
+current_tab = 0
 
 [node name="Sprzęty Rolne" type="Control" parent="CanvasLayer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -91,6 +90,7 @@ text = "ziarna sorgo - 40 gr"
 label_settings = SubResource("LabelSettings_qy6h4")
 
 [node name="Zwierzęta" type="Control" parent="CanvasLayer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -131,6 +131,6 @@ offset_top = -8.0
 offset_right = 4.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Back"
+text = "Nawracam"
 
 [connection signal="pressed" from="CanvasLayer/Main" to="." method="_on_main_pressed"]

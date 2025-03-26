@@ -144,6 +144,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Main" type="Button" parent="CanvasLayer"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Nawracam"
+
 [connection signal="pressed" from="CanvasLayer/GridContainer/Button" to="CanvasLayer/GridContainer/Button" method="_on_pressed"]
 [connection signal="puls" from="CanvasLayer/GridContainer/Button" to="." method="_on_button_puls"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/Button2" to="CanvasLayer/GridContainer/Button2" method="_on_pressed"]
@@ -176,3 +181,4 @@ autowrap_mode = 2
 [connection signal="puls" from="CanvasLayer/GridContainer/Button15" to="." method="_on_button_puls"]
 [connection signal="pressed" from="CanvasLayer/GridContainer/Button16" to="CanvasLayer/GridContainer/Button16" method="_on_pressed"]
 [connection signal="puls" from="CanvasLayer/GridContainer/Button16" to="." method="_on_button_puls"]
+[connection signal="pressed" from="CanvasLayer/Main" to="." method="_on_main_pressed"]
